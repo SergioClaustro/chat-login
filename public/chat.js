@@ -24,7 +24,7 @@ loginBtn.addEventListener("click", function () {
     .then((res) => res.json())
     .then((data) => {
       Cookies.set("token", data.token); // Store token in cookies
-      socket = io.connect("http://localhost:4000", {
+      socket = io.connect("https://chat-login.onrender.com", {
         query: { token: data.token },
       });
       chatSection.style.display = "block";
