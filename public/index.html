@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WebSockets 101</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <link href="/styles.css" rel="stylesheet" />
+  </head>
+  <body class="light-mode">
+    <div id="auth-section">
+      <h2>Login page</h2>
+
+      <h4>Credenciales</h4>
+      <span>Username: </span><em>mario</em> <br /><span>Password: </span>
+      <em>michat</em>
+      <br />
+      <br />
+
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" placeholder="Username" />
+      <br />
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" placeholder="Password" />
+      <br />
+      <button id="login-btn">Login</button>
+    </div>
+    <div id="chat-mario" style="display: none">
+      <div id="chat-window">
+        <h2>Chat Mario</h2>
+        <div id="output"></div>
+        <div id="feedback"></div>
+      </div>
+      <input type="text" id="handle" placeholder="Handle" />
+      <input type="text" id="message" placeholder="Message" />
+      <button id="send">Send</button>
+      <button id="toggle-dark-mode">Toggle Dark Mode</button>
+    </div>
+
+    <script src="/chat.js"></script>
+  </body>
+</html>
